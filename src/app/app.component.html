@@ -1,6 +1,58 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button aria-label="Menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1>Responsive Material Sidenavigation</h1>
-  </mat-toolbar>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand text-light ps-2" href="#">
+    BugTracker
+  </a>
+  <ul class="navbar-nav ms-auto pe-3">
+    <li class="nav-item">
+      <button class="nav-link text-light btn btn-secondary" [routerLink]="[]"><fa-icon [icon]="faUserPlus"></fa-icon>Invite User</button>
+    </li>
+    <li class="nav-item">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">item1</a>
+          <a class="dropdown-item" href="#">item 2</a>
+          <a class="dropdown-item" href="#">item 3</a>
+        </div>
+      </div>
+    </li>			
+    <li class="nav-item">
+      <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+    </ul>	
+</nav>
+
+<!-- Sidebar -->
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Customers
+            </a>
+          </li>
+          <!-- Add more sidebar items as needed -->
+        </ul>
+      </div>
+    </nav>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <!-- Your main content goes here -->
+      <h2>Main Content Area</h2>
+      <p>This is where your main content will appear.</p>
+    </main>
+  </div>
+</div>
